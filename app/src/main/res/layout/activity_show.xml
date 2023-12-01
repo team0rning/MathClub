@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".show">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/bg"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        app:srcCompat="@drawable/blackandorange" />-->
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:layout_editor_absoluteY="-5dp"
+        android:textAlignment="center"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/errorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="40dp"
+            android:layout_gravity="center"
+            android:paddingTop="7dp"
+            android:text="Данное задание устное, \n переходи к следующему! \n устно - значит можно не делать :)"
+            android:textAlignment="center"
+            android:textColor="@color/appTextColor"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+        <!-- Остальные элементы интерфейса, такие как ваша кнопка -->
+
+
+        <Button
+            android:id="@+id/backPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/appColor"
+            android:minHeight="48dp"
+            android:onClick="backToList"
+            android:text="Назад"
+            android:textColor="@color/appTextColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
+
+
+
+
+    <EditText
+        android:id="@+id/taskNumberGet2"
+        android:layout_width="162dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:hint="Введите номер"
+        android:inputType="number"
+        android:textColor="@color/appTextColor"
+        android:textColorHint="@color/appTextColor"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/searcher2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="search2"
+        android:paddingTop="2dp"
+        android:textColor="@color/appTextColor"
+        android:backgroundTint="@color/appColor"
+        android:text="поиск"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/taskDescriptionName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:text="Номер упражнения"
+        android:textAlignment="center"
+        android:textColor="@color/appTextColor"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="35dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:layout_marginTop="30dp"
+            android:textSize="25dp"
+            android:textAlignment="center" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="SpeakableTextPresentCheck">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter" />
+
+
+        </ScrollView>
+
+
+
+
+
+
+
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/taskDescription"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:text="TextView"-->
+        <!--            android:textAlignment="center"-->
+        <!--            android:paddingTop="15dp"-->
+        <!--            android:layout_marginTop="30dp"-->
+        <!--            android:textColor="@color/appTextColor"-->
+        <!--            android:textSize="20dp" />-->
+    </FrameLayout>
+
+    <!--    <TextView-->
+<!--        android:id="@+id/pageString"-->
+<!--        android:layout_width="52dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:layout_marginTop="92dp"-->
+<!--        android:layout_marginEnd="4dp"-->
+<!--        android:text="Стр:"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="25dp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/pageNumber"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/pageNumber"-->
+<!--        android:layout_width="42dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:layout_marginTop="92dp"-->
+<!--        android:layout_marginEnd="15dp"-->
+<!--        android:text="999"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="25dp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/taskString"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/taskString"-->
+<!--        android:layout_width="52dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:layout_marginTop="92dp"-->
+<!--        android:layout_marginEnd="4dp"-->
+<!--        android:text="Упр:"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="25dp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/taskNumber"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/taskNumber"-->
+<!--        android:layout_width="58dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:layout_marginTop="92dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:text="999"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="25dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/tastResult"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="24dp"-->
+<!--        android:onClick="setResult"-->
+<!--        android:text="Решить!"-->
+<!--        android:textColor="@color/appTextColor"-->
+<!--        android:backgroundTint="@color/appColor"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
