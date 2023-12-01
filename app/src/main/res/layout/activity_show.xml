@@ -36,7 +36,7 @@
             android:layout_marginLeft="40dp"
             android:layout_gravity="center"
             android:paddingTop="7dp"
-            android:text="Данное задание устное, \n переходи к следующему! \n устно - значит можно не делать :)"
+            android:text=""
             android:textAlignment="center"
             android:textColor="@color/appTextColor"
             android:textSize="13sp"
