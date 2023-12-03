@@ -22,11 +22,11 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText taskNumberGet;
+
 //
     private TextView tv;
 
-    public int c;
+
 
     String[] avaibleMaterial = {"k61"};
 
@@ -76,21 +76,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         Spinner spinnerProd = findViewById(R.id.spinnerProd);
-
         spinnerProd.setAdapter(adapterProd);
-
         spinnerProd.setSelection(0); // Установите "Выберите класс" как выбранный элемент по умолчанию
-
         spinnerProd.setPopupBackgroundResource(R.drawable.spinnerlistbg);
 
 
 
         Spinner spinnerPart = findViewById(R.id.spinnerPart);
-
         spinnerPart.setAdapter(adapterPart);
-
         spinnerPart.setSelection(0); // Установите "Выберите класс" как выбранный элемент по умолчанию
-
         spinnerPart.setPopupBackgroundResource(R.drawable.spinnerlistbg);
 
 
@@ -98,11 +92,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         Spinner spinnerClass = findViewById(R.id.spinnerClass);
-
         spinnerClass.setAdapter(adapterClass);
-
         spinnerClass.setSelection(0); // Установите "Выберите класс" как выбранный элемент по умолчанию
-
         spinnerClass.setPopupBackgroundResource(R.drawable.spinnerlistbg);
 
 
@@ -112,16 +103,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 String selectedItem = (String) parentView.getItemAtPosition(position);
 
-
-
-
-
-
-
-
-
                 if (!selectedItem.equals("Выберите класс")) {
-
 
                     if (!selectedItem.equals("Выберите класс")) {
                         if (selectedItem.equals("12 класс") || selectedItem.equals("11 класс") || selectedItem.equals("10 класс")) {
@@ -139,11 +121,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                     }
-
-
                     updateVariantAndTextView();
-
-
                 }
             }
 
@@ -152,9 +130,6 @@ public class MainActivity extends AppCompatActivity {
                 // Обработка случая, когда ничего не выбрано
             }
         });
-
-
-
 
 
 
@@ -171,19 +146,14 @@ public class MainActivity extends AppCompatActivity {
 
                 if (!selectedItem.equals("Выберите часть")) {
 
-
                     try {
                         part = Integer.parseInt(selectedItem.substring(0, 1)); // Преобразуем в int
                         // Теперь classN содержит целое число из обрезанной строки
                     } catch (NumberFormatException e) {
                         e.printStackTrace(); // Вывод исключения в лог
                     }
-
-
                 }
-
                 updateVariantAndTextView();
-
             }
 
             @Override
@@ -200,25 +170,18 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
         spinnerProd.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 String selectedItem = (String) parentView.getItemAtPosition(position);
                 if (!selectedItem.equals("Выберите издателя")) {
 
-
-
                     nameBook = String.valueOf(selectedItem.charAt(0));
-
-
-
                 }
 
-
-
                 updateVariantAndTextView();
-
-
             }
 
             @Override
@@ -281,11 +244,6 @@ public class MainActivity extends AppCompatActivity {
         if (imageName.length() == 2) {
             resourceId = getResources().getIdentifier(imageName, "drawable", getPackageName());
 
-
-//             Проверьте, существует ли ресурс с указанным именем
-//             Если ресурс существует, установите его как изображение в ImageView
-
-
             iv.setImageResource(resourceId);
             iv.setVisibility(View.VISIBLE);
 
@@ -299,22 +257,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//                if (selectedItem.equals("7 класс")){
-//                    ArrayAdapter<String> adapterPart = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item, new String[]{"Выберите часть", "1 часть"});
-//                    adapterPart.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//                    spinnerPart.setAdapter(adapterPart);
-//
-//                } else if (selectedItem.equals("6 класс")) {
-//                    ArrayAdapter<String> adapterPart = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item, new String[]{"Выберите часть", "1 часть", "2 часть"});
-//                    adapterPart.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//                    spinnerPart.setAdapter(adapterPart);
-//                }
-//
-//                else {
-//                    ArrayAdapter<String> adapterPart = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item, partsArr);
-//                    adapterPart.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//                    spinnerPart.setAdapter(adapterPart);
-//                }
-// Spinner от Spinner
+
 
 
