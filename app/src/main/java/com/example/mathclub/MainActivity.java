@@ -59,64 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        tv = findViewById(R.id.textView);
-//        taskNumberGet = findViewById(R.id.taskNumberGet);
 
-//
-//        String b = taskNumberGet.toString();
-//
-//        try {
-//            // Преобразуем текст в целое число
-//            int a = Integer.parseInt(b);
-//
-//            // Теперь 'число' содержит введенное целое число
-//            // Можете использовать его в вашем приложении
-//        } catch (NumberFormatException e) {
-//            // Обработка ошибки, если введенный текст не может быть преобразован в int
-//        }
-//    }
-
-
-//    public void searcher(View view){
-//        Intent intent = new Intent(this, show.class);
-//
-//        String b = taskNumberGet.toString();
-//        int a = Integer.parseInt(b);
-//
-//        int taskGot = a;
-//        intent.putExtra("num", taskGot);
-//        startActivity(intent);
-//    }
-
-//    public void search(View v){
-//        Intent intent = new Intent(this, show.class);
-//
-//        String b = taskNumberGet.getText().toString();
-//
-//
-//        try {
-//                    // Преобразуем текст в целое число
-//            int a = Integer.parseInt(b);
-//            int taskGot = a;
-//            intent.putExtra("num", taskGot);
-//
-//                    // Теперь 'число' содержит введенное целое число
-//                    // Можете использовать его в вашем приложении
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//                    // Обработка ошибки, если введенный текст не может быть преобразован в int
-//        }
-//
-//        startActivity(intent);
-//
-//    }
-
-//        ArrayAdapter<String> adapterClass = new ArrayAdapter<>(this, R.layout.item_dropdown_spinner_main, classArr);
-////        adapterClass.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        ArrayAdapter<String> adapterPart = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, partsArr);
-////        adapterPart.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        ArrayAdapter<String> adapterProd = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, prodsArr);
-////        adapterProd.setDropDownViewResource();
 
 
 
