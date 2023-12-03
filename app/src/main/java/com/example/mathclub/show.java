@@ -50,7 +50,7 @@ public class show extends AppCompatActivity {
 //    int[] menuListTasks = {3};
     int[] oralTasks = {2, 5, 7, 211, 202, 206};
 
-    public int truee;
+
 
     public String[] allTasksName = new String[100];
     public String[] allTasksanswer = new String[100];
@@ -271,7 +271,7 @@ public class show extends AppCompatActivity {
             al = Integer.parseInt(be);
 
 
-            truee = al;
+
 
 
             ImageView imageView = findViewById(R.id.imageView);
